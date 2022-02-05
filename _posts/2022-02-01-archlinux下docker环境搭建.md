@@ -12,9 +12,11 @@ categories: [archlinux, docker]
 sudo pacman -S docker
 # 将当前用户加入docker组
 sudo gpasswd -a ${USER} docker
-# 提权
-sudo chmod 777 /var/run/docker.sock 
 # 开机自启
 sudo systemctl enable docker.service 
 sudo systemctl enable docker.socket
+# 启动docker
+sudo systemctl start docker.socket
+# 提权
+sudo chmod 777 /var/run/docker.sock 
 ```

@@ -20,8 +20,7 @@ sudo apt-get install build-essential xorg-dev bison libgtk2.0-dev g++
 ```console
 tar -zxvf bochs-2.7.tar.gz
 cd bochs-2.7
-# --enable-disasm这个可能是老版本生效的，新版本加上这个参数也是报找不到的警告，是无效的
-sudo ./configure --enable-debugger --enable-disasm
+sudo ./configure --enable-debugger
 ```
 
 清除配置时生成的中间文件，并重新编译、安装
